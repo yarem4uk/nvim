@@ -18,6 +18,7 @@ function _G.dump(...)
 end
 
 
+
 -- dump({vim.opt.statusline})
 -- vim.opt.statusline = [[%Y]]
 
