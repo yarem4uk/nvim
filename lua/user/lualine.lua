@@ -8,7 +8,7 @@ lualine.setup{
     icons_enabled = false,
     theme = 'gruvbox-material',
     section_separators = '',
-    component_separatrs = '',
+    component_separators = '',
     always_divide_middle = false,
   },
   sections = {

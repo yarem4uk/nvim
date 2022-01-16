@@ -4,9 +4,10 @@ if not status_ok then
   return
 end
 
-
-
 cmp.setup({
+  completion = {
+    autocomplete = false
+  },
     -- snippet = {
     --   -- REQUIRED - you must specify a snippet engine
     --   expand = function(args)
@@ -19,6 +20,7 @@ cmp.setup({
     mapping = {
       ['<C-k>'] = cmp.mapping.select_prev_item(),
       ['<C-j>'] = cmp.mapping.select_next_item(),
+      ['<C-n>'] = cmp.mapping.complete(),
       ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
       ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
       ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
