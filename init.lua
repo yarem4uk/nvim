@@ -17,8 +17,6 @@ function _G.dump(...)
     print(unpack(objects))
 end
 
-
-
--- dump({vim.opt.statusline})
+-- print(dump({vim.o}))
 -- vim.opt.statusline = [[%Y]]
 

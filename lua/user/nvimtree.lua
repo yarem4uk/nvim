@@ -1,3 +1,27 @@
+vim.g.nvim_tree_icons = {
+ default = '',
+ symlink = '',
+ git = {
+   unstaged = '',
+   staged = '',
+   unmerged = '',
+   renamed = '',
+   untracked = '',
+   deleted = '',
+   ignored = '',
+   },
+ folder = {
+   arrow_open = '',
+   arrow_closed = '',
+   default = '',
+   open = '',
+   empty = '',
+   empty_open = '',
+   symlink = '',
+   symlink_open = '',
+   }
+ }
+
 local status_ok, nvim_tree = pcall(require, 'nvim-tree')
 if not status_ok then
   return
@@ -27,15 +51,15 @@ nvim_tree.setup {
   diagnostics = {
     enable = false,
     icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
+      hint = '',
+      info = '',
+      warning = '',
+      error = '',
     }
   },
   update_focused_file = {
     enable      = false,
-    update_cwd  = false,
+    update_cwd  = true,
     ignore_list = {}
   },
   system_open = {
@@ -43,7 +67,7 @@ nvim_tree.setup {
     args = {}
   },
   filters = {
-    dotfiles = false,
+    dotfiles = true,
     custom = {}
   },
   git = {
@@ -52,14 +76,16 @@ nvim_tree.setup {
     timeout = 500,
   },
   view = {
-    width = 30,
+    width = 25,
     height = 30,
     hide_root_folder = false,
     side = 'left',
     auto_resize = true,
     mappings = {
       custom_only = false,
-      list = {}
+      list = {
+        { key = 'h', cb = tree_cb 'close_node' },
+      },
     },
     number = false,
     relativenumber = false,
@@ -70,9 +96,9 @@ nvim_tree.setup {
     require_confirm = true
   },
   show_icons = {
-   git = 0,
-   folders = 0,
-   files = 0,
-   folder_arrows = 0,
+   git = '',
+   folders = '',
+   files = '',
+   folder_arrows = '',
   },
 }

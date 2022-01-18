@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+-- print(vim.bo.filetype)
+
 lualine.setup{
   options = {
     icons_enabled = false,
