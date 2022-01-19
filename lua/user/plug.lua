@@ -1,16 +1,12 @@
--- Automatically install packer
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({
-    'git',
-    'clone',
-    '--depth',
-    '1',
-    'https://github.com/wbthomason/packer.nvim',
-    install_path
-  })
-  vim.cmd [[packadd packer.nvim]]
+  packer_bootstrap = fn.system({'git',
+  'clone',
+  '--depth',
+  '1',
+  'https://github.com/wbthomason/packer.nvim',
+  install_path})
 end
 
 -- Automatically run :PackerCompile whenever plug.lua is updated
@@ -28,8 +24,8 @@ if not status_ok then
 end
 
 return packer.startup(function(use)
-  -- My plugins here
 
+    -- My plugins here
     use 'wbthomason/packer.nvim'
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
@@ -50,9 +46,10 @@ return packer.startup(function(use)
     use 'kyazdani42/nvim-tree.lua'
     -- use 'kyazdani42/nvim-web-devicons'
 
+    -- telescope
     use 'nvim-telescope/telescope.nvim'
 
-
+    -- treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
@@ -68,6 +65,9 @@ return packer.startup(function(use)
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
+
+    --null-ls
+    use 'jose-elias-alvarez/null-ls.nvim'
 
 
   -- Automatically set up your configuration after cloning packer.nvim

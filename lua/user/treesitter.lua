@@ -12,7 +12,7 @@ configs.setup {
   sync_install = false,
 
   -- List of parsers to ignore installing
-  ignore_install = {},
+  ignore_install = require('user.ts_ignore').ignore(),
 
   highlight = {
     -- `false` will disable the whole extension
