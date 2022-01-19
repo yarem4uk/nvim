@@ -71,4 +71,4 @@ map('', '<C-p>', ':Telescope find_files<cr>', silent)
 map('', '<leader>g', ':Telescope live_grep<cr>', silent)
 
 map('n', ',,', ':NvimTreeToggle<cr>', silent)
-
+map('n', '<leader>,', ':NvimTreeFindFile<cr>', silent)
