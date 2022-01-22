@@ -67,8 +67,12 @@ map('', '<C-h>', '<C-w><Left>', silent)
 map('n', [[<C-\>]],
 "<cmd>lua require('user.telescope').find_vim_dot_files() <cr>",
   silent)
-map('', '<C-p>', ':Telescope find_files<cr>', silent)
-map('', '<leader>g', ':Telescope live_grep<cr>', silent)
+map('', ';f', ':Telescope find_files<cr>', silent)
+map('', ';r', ':Telescope live_grep<cr>', silent)
+map('', ';;', ':Telescope buffers<cr>', silent)
+-- map('', ';;', ':Telescope help_tags<cr>', silent)
+-- map('', '<C-p>', ':Telescope find_files<cr>', silent)
+-- map('', '<leader>g', ':Telescope live_grep<cr>', silent)
 
 map('n', ',,', ':NvimTreeToggle<cr>', silent)
 map('n', '<leader>,', ':NvimTreeFindFile<cr>', silent)

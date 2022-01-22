@@ -22,6 +22,7 @@ telescope.setup{
         ['<C-l>'] = actions.close
       },
       n = {
+        ['q'] = actions.close,
         ['gg'] = actions.move_to_top,
         ['G'] = actions.move_to_bottom,
 
