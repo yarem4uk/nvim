@@ -3,10 +3,9 @@ if not status_ok then
   return
 end
 
-
 local actions = require('telescope.actions')
 
-telescope.setup{
+telescope.setup({
   defaults = {
     -- sorting_strategy = 'ascending',
     prompt_prefix = '-> ',
@@ -19,7 +18,7 @@ telescope.setup{
         ['<C-j>'] = actions.move_selection_next,
         ['<C-k>'] = actions.move_selection_previous,
 
-        ['<C-l>'] = actions.close
+        ['<C-l>'] = actions.close,
       },
       n = {
         ['q'] = actions.close,
@@ -38,8 +37,8 @@ telescope.setup{
     --   ignore_current_buffers = true,
     --   sort_mru = true
     -- }
-  }
-}
+  },
+})
 
 local M = {}
 

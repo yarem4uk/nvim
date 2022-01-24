@@ -11,6 +11,7 @@ require('user.nvimtree')
 require('user.treesitter')
 require('user.cmp')
 require('lsp.lspconfig')
+require('lsp.null-ls')
 
 function _G.dump(...)
     local objects = vim.tbl_map(vim.inspect, {...})
