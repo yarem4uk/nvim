@@ -3,10 +3,10 @@ if not status_ok then
   return
 end
 
--- print(vim.bo.filetype)
-
 lualine.setup({
   options = {
+
+    disabled_filetypes = { 'NvimTree' },
     icons_enabled = false,
     theme = 'gruvbox-material',
     section_separators = '',

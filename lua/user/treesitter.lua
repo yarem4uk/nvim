@@ -3,10 +3,9 @@ if not status_ok then
   return
 end
 
-
-configs.setup {
+configs.setup({
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = "maintained",
+  ensure_installed = 'maintained',
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -30,4 +29,4 @@ configs.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = true,
   },
-}
+})

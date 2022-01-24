@@ -61,8 +61,8 @@ M.ignore = function()
     'jsonc',
     'tlaplus',
     'rasi',
-    'hcl'
-}
+    'hcl',
+  }
   return servers
 end
 
