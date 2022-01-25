@@ -5,7 +5,6 @@ end
 
 lualine.setup({
   options = {
-
     disabled_filetypes = { 'NvimTree' },
     icons_enabled = false,
     theme = 'gruvbox-material',

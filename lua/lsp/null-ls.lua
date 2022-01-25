@@ -12,6 +12,10 @@ local sources = {
 
   -- builtins.completion.spell,
 
+  formatting.black.with({
+    extra_args = { '--fast', '-l', 79 },
+  }),
+
   formatting.stylua.with({
     extra_args = {
       '--indent-type',
@@ -24,6 +28,8 @@ local sources = {
       'Unix',
     },
   }),
+
+  diagnostics.flake8,
   -- extra_args = { '--config-path', vim.fn.expand('~/.config/nvim/stylua.toml') },
 }
 
