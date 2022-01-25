@@ -5,7 +5,6 @@ local function map(mode, lhs, rhs, opts)
   end
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
-
 --local map = vim.api.nvim_set_keymap
 --local default = { noremap = true, silent = true }
 
@@ -34,33 +33,34 @@ map('', '<left>', '<NOP>', silent)
 map('', '<right>', '<NOP>', silent)
 map('', '<bs>', '<NOP>', silent)
 
-map('v', '<leader>y', ':w! ~/.vbuf<cr>', silent)
-map('', '<leader>y', ':.w! ~/.vbuf<cr>', silent)
-map('', '<leader>p', ':r ~/.vbuf<cr>', silent)
 
 map('i', ',w', '<esc>:w<cr>', silent)
 map('', ',w', ':w<cr>', silent)
 
-map('', '<leader>q', ':q!<cr>', silent)
-map('', '<leader>o', ':only<cr>', silent)
-
-map('o', 'im', 'i[', silent)
+-- COMMAND MAPPING
 
 map('', [[']], [[`]], silent)
 map('', [[`]], [[']], silent)
+
+map('n', 'k', 'gk', silent)
+map('n', 'gk', 'k', silent)
+map('n', 'j', 'gj', silent)
+map('n', 'gj', 'j', silent)
+
 
 map('v', '"y', '"*y', silent)
 map('n', '"y', '"*y', silent)
 map('n', '"p', '"*p', silent)
 
---Map ctrl-movement keys to window switching
-
 map('', 'Y', 'y$', silent)
 
+-- Make Ctrl-e jump to the end of the line in the insert mode.
 map('', '<C-k>', '<C-w><Up>', silent)
 map('', '<C-j>', '<C-w><Down>', silent)
 map('', '<C-l>', '<C-w><Right>', silent)
 map('', '<C-h>', '<C-w><Left>', silent)
+
+
 
 map('n', [[<C-\>]], "<cmd>lua require('user.telescope').find_vim_dot_files() <cr>", silent)
 map('', ';f', ':Telescope find_files<cr>', silent)
@@ -70,7 +70,34 @@ map('', ';b', ':Telescope buffers<cr>', silent)
 -- map('', '<C-p>', ':Telescope find_files<cr>', silent)
 -- map('', '<leader>g', ':Telescope live_grep<cr>', silent)
 
-map('n', '<leader>f', ':Format<cr>', silent)
 
 map('n', ',,', ':NvimTreeToggle<cr>', silent)
 map('n', '<leader>,', ':NvimTreeFindFile<cr>', silent)
+
+--movement
+map('o', 'im', 'i[', silent)
+map('o', 'in', ':<c-u>normal! f(vi(<cr>', silent)
+map('o', 'il', ':<c-u>normal! F)vi(<cr>', silent)
+
+map('i', 'AA', '<esc>A', silent)
+map('i', 'II', '<esc>I', silent)
+
+-- LEADER MAPING
+
+-- upper/lower word
+map('n', '<leader>u', [[mQviwU'Q]], silent)
+map('n', '<leader>l', [[mQviwu'Q]], silent)
+
+-- formatting
+map('n', '<leader>f', ':Format<cr>', silent)
+
+map('v', '<leader>y', ':w! ~/.vbuf<cr>', silent)
+map('', '<leader>y', ':.w! ~/.vbuf<cr>', silent)
+map('', '<leader>p', ':r ~/.vbuf<cr>', silent)
+
+map('', '<leader>q', ':q!<cr>', silent)
+map('', '<leader>o', ':only<cr>', silent)
+
+
+-- Quickly select the text I just pasted.
+map('n', 'gV', '`[v`]', silent)

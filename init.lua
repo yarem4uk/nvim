@@ -20,4 +20,3 @@ end
 
 -- print(dump({vim.o}))
 -- vim.opt.statusline = [[%Y]]
-
