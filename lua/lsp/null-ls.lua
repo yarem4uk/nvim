@@ -7,15 +7,18 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 local sources = {
-  -- formatting.builtins.formatting.stylua,
-  -- builtins.diagnostics.eslint,
 
-  -- builtins.completion.spell,
+  -- js
+  formatting.prettier,
+  diagnostics.eslint,
 
+  -- python
   formatting.black.with({
     extra_args = { '--fast', '-l', 79 },
   }),
+  diagnostics.flake8,
 
+  -- lua
   formatting.stylua.with({
     extra_args = {
       '--indent-type',
@@ -28,12 +31,9 @@ local sources = {
       'Unix',
     },
   }),
-
-  diagnostics.flake8,
-  -- extra_args = { '--config-path', vim.fn.expand('~/.config/nvim/stylua.toml') },
 }
 
 null_ls.setup({
-  -- debug = false,
+  debug = false,
   sources = sources,
 })

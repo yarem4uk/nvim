@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 local actions = require('telescope.actions')
+local builtin = require('telescope.builtin')
 
 telescope.setup({
   defaults = {
@@ -48,7 +49,7 @@ M.find_vim_dot_files = function()
     cwd = '~/.config/nvim',
     previewer = false,
   }
-  require('telescope.builtin').find_files(opt)
+  builtin.find_files(opt)
 end
 
 return M

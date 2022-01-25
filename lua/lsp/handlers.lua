@@ -21,7 +21,7 @@ M.setup = function()
       active = signs,
     },
     update_in_insert = false,
-    underline = true,
+    underline = false,
     severity_sort = true,
     float = {
       focusable = true,
@@ -56,14 +56,20 @@ M.keymap = function(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi',    '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+  -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '[r', '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', ']r', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
   vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
 end
 
-M.on_attach = function(_, bufnr)
+M.on_attach = function(client, bufnr)
+
+  if client.name == 'tsserver' then
+    client.resolved_capabilities.document_formatting = false
+    client.resolved_capabilities.document_range_formatting = false
+  end
+
   M.keymap(bufnr)
 end
 
