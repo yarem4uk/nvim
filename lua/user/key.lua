@@ -11,6 +11,8 @@ end
 
 local silent = { silent = true }
 
+
+
 -- disabling keys
 local disabling_keys = { '<up>', '<down>', '<left>', '<right>', '<bs>' }
 

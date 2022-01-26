@@ -38,6 +38,7 @@ g.gruvbox_material_background = 'soft'
 g.gruvbox_material_transparent_background = 1
 
 
--- vim.cmd([[
---     au BufWriteRre * :Format<cr>
--- ]])
+vim.cmd([[
+  autocmd bufread,bufnewfile *.py setl sts=4 sw=4 tw=79 cc=79
+  autocmd bufread,bufnewfile *.html setl sts=2 sw=2 tw=79
+]])
