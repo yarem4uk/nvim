@@ -11,29 +11,20 @@ end
 
 local silent = { silent = true }
 
+-- disabling keys
+local disabling_keys = { '<up>', '<down>', '<left>', '<right>', '<bs>' }
+
+for i = 1, #disabling_keys do
+  local mode = {'i', 'c', ''}
+  for m = 1, #mode do
+    map(mode[m], disabling_keys[i], '<NOP>', silent)
+  end
+end
+
 map('', '<leader><leader>', '<C-^>', silent)
-
-map('i', '<up>', '<NOP>', silent)
-map('i', '<down>', '<NOP>', silent)
-map('i', '<left>', '<NOP>', silent)
-map('i', '<right>', '<NOP>', silent)
-map('i', '<bs>', '<NOP>', silent)
-
-map('c', '<up>', '<NOP>', silent)
-map('c', '<down>', '<NOP>', silent)
-map('c', '<left>', '<NOP>', silent)
-map('c', '<right>', '<NOP>', silent)
-map('c', '<bs>', '<NOP>', silent)
 
 map('c', '<c-k>', '<Up>', {})
 map('c', '<c-j>', '<Down>', {})
-
-map('', '<up>', '<NOP>', silent)
-map('', '<down>', '<NOP>', silent)
-map('', '<left>', '<NOP>', silent)
-map('', '<right>', '<NOP>', silent)
-map('', '<bs>', '<NOP>', silent)
-
 
 map('i', ',w', '<esc>:w<cr>', silent)
 map('', ',w', ':w<cr>', silent)
@@ -48,7 +39,6 @@ map('n', 'gk', 'k', silent)
 map('n', 'j', 'gj', silent)
 map('n', 'gj', 'j', silent)
 
-
 map('v', '"y', '"*y', silent)
 map('n', '"y', '"*y', silent)
 map('n', '"p', '"*p', silent)
@@ -61,15 +51,12 @@ map('', '<C-j>', '<C-w><Down>', silent)
 map('', '<C-l>', '<C-w><Right>', silent)
 map('', '<C-h>', '<C-w><Left>', silent)
 
-
-
 map('', ';f', ':Telescope find_files<cr>', silent)
 map('', ';r', ':Telescope live_grep<cr>', silent)
 map('', ';b', ':Telescope buffers<cr>', silent)
 
 -- open luavim files by telescope
 map('n', [[<C-\>]], "<cmd>lua require('user.telescope').find_vim_dot_files()<cr>", silent)
-
 
 map('n', ',,', ':NvimTreeToggle<cr>', silent)
 map('n', '<leader>,', ':NvimTreeFindFile<cr>', silent)
@@ -97,7 +84,6 @@ map('', '<leader>p', ':r ~/.vbuf<cr>', silent)
 
 map('', '<leader>q', ':q!<cr>', silent)
 map('', '<leader>o', ':only<cr>', silent)
-
 
 -- Quickly select the text I just pasted.
 map('n', 'gV', '`[v`]', silent)
