@@ -1,7 +1,6 @@
 local cmd = vim.cmd
 local g = vim.g
 local opt = vim.opt
-
 g.mapleader = ' '
 
 opt.ttyfast = true
@@ -22,8 +21,8 @@ opt.showmode = false
 opt.cursorline = true
 
 opt.expandtab = true
-opt.softtabstop=2
-opt.shiftwidth=2
+opt.softtabstop = 2
+opt.shiftwidth = 2
 opt.autoindent = true
 opt.smartindent = true
 
@@ -37,6 +36,12 @@ opt.laststatus = 2
 g.gruvbox_material_background = 'soft'
 g.gruvbox_material_transparent_background = 1
 
+ -- ultisnips
+g.UltiSnipsSnippetDirectories = { '~/.config/nvim/ultisnips', 'ultisnips' }
+g.UltiSnipsUsePythonVersion = 3
+g.UltiSnipsExpandTrigger='<Tab>'
+g.UltiSnipsJumpForwardTrigger='<c-j>'
+g.UltiSnipsJumpBackwardTrigger='<c-k>'
 
 vim.cmd([[
   autocmd bufread,bufnewfile *.py setl sts=4 sw=4 tw=79 cc=79

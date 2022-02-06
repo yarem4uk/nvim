@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/ghost/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ultisnips = {
+    loaded = true,
+    path = "/home/ghost/.local/share/nvim/site/pack/packer/start/ultisnips",
+    url = "https://github.com/SirVer/ultisnips"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/ghost/.local/share/nvim/site/pack/packer/start/vim-commentary",
