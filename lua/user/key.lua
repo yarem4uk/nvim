@@ -24,6 +24,7 @@ for i = 1, #disabling_keys do
 end
 
 map('', '<leader><leader>', '<C-^>', silent)
+map('i', ';e', '<esc>', silent)
 
 map('c', '<c-k>', '<Up>', {})
 map('c', '<c-j>', '<Down>', {})
