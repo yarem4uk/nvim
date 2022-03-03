@@ -11,13 +11,11 @@ end
 
 local silent = { silent = true }
 
-
-
 -- disabling keys
 local disabling_keys = { '<up>', '<down>', '<left>', '<right>', '<bs>' }
 
 for i = 1, #disabling_keys do
-  local mode = {'i', 'c', ''}
+  local mode = { 'i', 'c', '' }
   for m = 1, #mode do
     map(mode[m], disabling_keys[i], '<NOP>', silent)
   end
@@ -55,11 +53,12 @@ map('', '<C-l>', '<C-w><Right>', silent)
 map('', '<C-h>', '<C-w><Left>', silent)
 
 map('', ';f', ':Telescope find_files<cr>', silent)
-map('', ';r', ':Telescope live_grep<cr>', silent)
+map('', ';g', ':Telescope live_grep<cr>', silent)
 map('', ';b', ':Telescope buffers<cr>', silent)
 
 -- open luavim files by telescope
-map('n', [[<C-\>]], "<cmd>lua require('user.telescope').find_vim_dot_files()<cr>", silent)
+-- map('n', [[<C-\>]], "<cmd>lua require('user.telescope').find_vim_dot_files()<cr>", silent)
+map('n', ';d', "<cmd>lua require('user.telescope').find_vim_dot_files()<cr>", silent)
 
 map('n', ',,', ':NvimTreeToggle<cr>', silent)
 map('n', '<leader>,', ':NvimTreeFindFile<cr>', silent)
@@ -88,5 +87,8 @@ map('', '<leader>p', ':r ~/.vbuf<cr>', silent)
 map('', '<leader>q', ':q!<cr>', silent)
 map('', '<leader>o', ':only<cr>', silent)
 
--- Quickly select the text I just pasted.
+-- quickly select the text I just pasted.
 map('n', 'gV', '`[v`]', silent)
+
+-- shorcut to reload my snippets
+map('n', '<leader>s', ':source ~/.config/nvim/lua/user/luasnip.lua<cr>', silent)

@@ -33,7 +33,6 @@ lsp_installer.on_server_ready(function(server)
       opts = vim.tbl_deep_extend('force', sumneko_opts, opts)
     end
 
-
   server:setup(opts)
 end)
 

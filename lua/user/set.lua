@@ -37,13 +37,15 @@ g.gruvbox_material_background = 'soft'
 g.gruvbox_material_transparent_background = 1
 
  -- ultisnips
-g.UltiSnipsSnippetDirectories = { '~/.config/nvim/ultisnips', 'ultisnips' }
-g.UltiSnipsUsePythonVersion = 3
-g.UltiSnipsExpandTrigger='<Tab>'
-g.UltiSnipsJumpForwardTrigger='<c-j>'
-g.UltiSnipsJumpBackwardTrigger='<c-k>'
+-- g.UltiSnipsSnippetDirectories = { '~/.config/nvim/ultisnips', 'ultisnips' }
+-- g.UltiSnipsUsePythonVersion = 3
+-- g.UltiSnipsExpandTrigger='<Tab>'
+-- g.UltiSnipsJumpForwardTrigger='<c-j>'
+-- g.UltiSnipsJumpBackwardTrigger='<c-k>'
 
 vim.cmd([[
+  au BufNewFile,BufRead *.ejs set ft=html
+
   autocmd bufread,bufnewfile *.py setl sts=4 sw=4 tw=79 cc=79
   autocmd bufread,bufnewfile *.html setl sts=2 sw=2 tw=79
 ]])
