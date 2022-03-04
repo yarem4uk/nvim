@@ -58,13 +58,12 @@ ls.snippets = {
   lua = {
     s('req', fmt("local {} = require('{}')\n{}", { i(1, 'default'), rep(1), i(0) })),
   },
+  javascript = require('snip.javascript').main(),
 }
 ls.autosnippets = {
-  all = {
-    s({ trig = 'jj', wordTrig = false }, { t('('), i(1), t(')') }),
-    s({ trig = '[^ou]?mm', wordTrig = false, regTrig = true }, { t('['), i(1), t(']'), i(0) }),
-  },
+  all = require('snip.all').auto(),
   lua = {
     s({ trig = 'cmm', wordTrig = false, regTrig = true }, { t('[['), i(1), t(']]') }),
   },
+  javascript = require('snip.javascript').auto(),
 }

@@ -7,7 +7,8 @@ require('user.telescope')
 require('user.colorsheme')
 require('user.nvimtree')
 require('user.treesitter')
-require('user.luasnip')
+
+require('snip.luasnip')
 
 require('user.cmp')
 require('lsp.lspconfig')

@@ -91,4 +91,4 @@ map('', '<leader>o', ':only<cr>', silent)
 map('n', 'gV', '`[v`]', silent)
 
 -- shorcut to reload my snippets
-map('n', '<leader>s', ':source ~/.config/nvim/lua/user/luasnip.lua<cr>', silent)
+map('n', '<leader>s', ':source ~/.config/nvim/lua/snip/luasnip.lua<cr>', silent)
