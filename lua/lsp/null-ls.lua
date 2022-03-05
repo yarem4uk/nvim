@@ -12,7 +12,16 @@ local sources = {
   -- js
   diagnostics.eslint,
   code_actions.eslint,
-  formatting.prettier,
+  formatting.prettier.with({
+    extra_args = {
+      '--no-semi',
+      '--single-quote',
+      '--trailing-coma',
+      'es5',
+      '--bracking-spasing',
+      '--no-jsx-bracket-same-line',
+    },
+  }),
 
   -- python
   formatting.black.with({
