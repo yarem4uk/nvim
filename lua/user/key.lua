@@ -89,6 +89,3 @@ map('', '<leader>o', ':only<cr>', silent)
 
 -- quickly select the text I just pasted.
 map('n', 'gV', '`[v`]', silent)
-
--- shorcut to reload my snippets
-map('n', '<leader>s', ':source ~/.config/nvim/lua/snip/luasnip.lua<cr>', silent)
