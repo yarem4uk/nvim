@@ -38,10 +38,10 @@ g.gruvbox_material_transparent_background = 1
 
  -- ultisnips
 -- g.UltiSnipsSnippetDirectories = { '~/.config/nvim/ultisnips', 'ultisnips' }
--- g.UltiSnipsUsePythonVersion = 3
--- g.UltiSnipsExpandTrigger='<Tab>'
--- g.UltiSnipsJumpForwardTrigger='<c-j>'
--- g.UltiSnipsJumpBackwardTrigger='<c-k>'
+g.UltiSnipsUsePythonVersion = 3
+g.UltiSnipsExpandTrigger='<c-i>'
+g.UltiSnipsJumpForwardTrigger='<c-i>'
+g.UltiSnipsJumpBackwardTrigger='<c-k>'
 
 vim.cmd([[
   au BufNewFile,BufRead *.ejs set ft=html
