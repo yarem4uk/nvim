@@ -8,8 +8,6 @@ require('user.colorsheme')
 require('user.nvimtree')
 require('user.treesitter')
 
-require('snip.luasnip')
-
 require('user.cmp')
 require('lsp.lspconfig')
 require('lsp.null-ls')
