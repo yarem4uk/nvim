@@ -99,11 +99,6 @@ _G.packer_plugins = {
     path = "/home/ghost/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  luasnip = {
-    loaded = true,
-    path = "/home/ghost/.local/share/nvim/site/pack/packer/start/luasnip",
-    url = "https://github.com/l3mon4d3/luasnip"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/ghost/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -153,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ghost/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ultisnips = {
+    loaded = true,
+    path = "/home/ghost/.local/share/nvim/site/pack/packer/start/ultisnips",
+    url = "https://github.com/SirVer/ultisnips"
   },
   ["vim-commentary"] = {
     loaded = true,

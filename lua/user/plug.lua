@@ -66,11 +66,8 @@ return packer.startup(function(use)
 	use('hrsh7th/cmp-path')
 	use('hrsh7th/cmp-cmdline')
 
-        -- luasnips
-        use('l3mon4d3/luasnip')
-
         -- ultisnips
-        -- use('SirVer/ultisnips')
+        use('SirVer/ultisnips')
 
 	--null-ls
 	use('jose-elias-alvarez/null-ls.nvim')
