@@ -72,6 +72,9 @@ return packer.startup(function(use)
 	--null-ls
 	use('jose-elias-alvarez/null-ls.nvim')
 
+        --emet
+        use('mattn/emmet-vim')
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	if packer_bootstrap then
 		packer.sync()

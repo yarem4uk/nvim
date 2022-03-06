@@ -39,8 +39,8 @@ g.gruvbox_material_transparent_background = 1
  -- ultisnips
 -- g.UltiSnipsSnippetDirectories = { '~/.config/nvim/UltiSnips', 'UltiSnips' }
 g.UltiSnipsUsePythonVersion = 3
-g.UltiSnipsExpandTrigger='<c-i>'
-g.UltiSnipsJumpForwardTrigger='<c-i>'
+-- g.UltiSnipsExpandTrigger='<c-i>' 
+g.UltiSnipsJumpForwardTrigger='<c-j>'
 g.UltiSnipsJumpBackwardTrigger='<c-k>'
 
 vim.cmd([[

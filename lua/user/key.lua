@@ -69,7 +69,8 @@ map('o', 'in', ':<c-u>normal! f(vi(<cr>', silent)
 map('o', 'il', ':<c-u>normal! F)vi(<cr>', silent)
 
 map('i', 'AA', '<esc>A', silent)
-map('i', 'II', '<esc>I', silent)
+map('i', 'AA', '<esc>A', silent)
+-- map('i', '<c-i>', '<tbs>', silent)
 
 -- LEADER MAPING
 
