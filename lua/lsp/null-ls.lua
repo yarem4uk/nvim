@@ -14,9 +14,10 @@ local sources = {
   -- code_actions.eslint,
   formatting.prettier.with({
     extra_args = {
-      '--no-semi',
+      -- '--no-semi',
+      -- '--semi',
       '--single-quote',
-      '--trailing-coma',
+      '--trailing-comma',
       'es5',
       '--bracking-spasing',
       '--no-jsx-bracket-same-line',

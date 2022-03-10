@@ -45,6 +45,7 @@ g.UltiSnipsJumpBackwardTrigger='<c-k>'
 
 vim.cmd([[
   au BufNewFile,BufRead *.ejs set ft=html
+  au BufNewFile,BufRead *.jsx set ft=javascript
 
   autocmd bufread,bufnewfile *.py setl sts=4 sw=4 tw=79 cc=79
   autocmd bufread,bufnewfile *.html setl sts=2 sw=2 tw=79
