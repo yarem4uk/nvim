@@ -1,13 +1,16 @@
 local cmd = vim.cmd
 local g = vim.g
 local opt = vim.opt
+
+cmd('source ~/.config/nvim/abbreviations.vim')
+
 g.mapleader = ' '
 
 opt.ttyfast = true
 opt.lazyredraw = true
 
 opt.undofile = true
-cmd 'set undodir=~/.config/nvim/.backups'
+cmd('set undodir=~/.config/nvim/.backups')
 opt.number = true
 opt.relativenumber = true
 opt.ruler = true
@@ -26,6 +29,9 @@ opt.shiftwidth = 2
 opt.autoindent = true
 opt.smartindent = true
 
+opt.foldmethod = 'indent'
+opt.foldlevelstart = 99
+
 -- opt.t_Co=256
 opt.hls = false
 opt.ignorecase = true
@@ -36,12 +42,12 @@ opt.laststatus = 2
 g.gruvbox_material_background = 'soft'
 g.gruvbox_material_transparent_background = 1
 
- -- ultisnips
+-- ultisnips
 -- g.UltiSnipsSnippetDirectories = { '~/.config/nvim/UltiSnips', 'UltiSnips' }
 g.UltiSnipsUsePythonVersion = 3
--- g.UltiSnipsExpandTrigger='<c-i>' 
-g.UltiSnipsJumpForwardTrigger='<c-j>'
-g.UltiSnipsJumpBackwardTrigger='<c-k>'
+-- g.UltiSnipsExpandTrigger='<c-i>'
+g.UltiSnipsJumpForwardTrigger = '<c-j>'
+g.UltiSnipsJumpBackwardTrigger = '<c-k>'
 
 vim.cmd([[
   au BufNewFile,BufRead *.ejs set ft=html
