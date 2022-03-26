@@ -52,13 +52,13 @@ map('', '<C-j>', '<C-w><Down>', silent)
 map('', '<C-l>', '<C-w><Right>', silent)
 map('', '<C-h>', '<C-w><Left>', silent)
 
-map('', ';f', ':Telescope find_files<cr>', silent)
-map('', ';g', ':Telescope live_grep<cr>', silent)
-map('', ';b', ':Telescope buffers<cr>', silent)
+map('', '<leader>r', ':Telescope find_files<cr>', silent)
+map('', '<leader>g', ':Telescope live_grep<cr>', silent)
+map('', '<leader>b', ':Telescope buffers<cr>', silent)
 
 -- open luavim files by telescope
 -- map('n', [[<C-\>]], "<cmd>lua require('user.telescope').find_vim_dot_files()<cr>", silent)
-map('n', ';d', "<cmd>lua require('user.telescope').find_vim_dot_files()<cr>", silent)
+map('n', '<leader>h', "<cmd>lua require('user.telescope').find_vim_dot_files()<cr>", silent)
 
 map('n', ',,', ':NvimTreeToggle<cr>', silent)
 map('n', '<leader>,', ':NvimTreeFindFile<cr>', silent)
