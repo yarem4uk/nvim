@@ -19,6 +19,7 @@ opt.linebreak = true
 opt.showcmd = true
 opt.showmatch = true
 opt.joinspaces = false
+opt.swapfile = false
 
 opt.showmode = false
 opt.cursorline = true
@@ -49,10 +50,13 @@ g.UltiSnipsUsePythonVersion = 3
 g.UltiSnipsJumpForwardTrigger = '<c-j>'
 g.UltiSnipsJumpBackwardTrigger = '<c-k>'
 
-vim.cmd([[
+cmd([[
   au BufNewFile,BufRead *.ejs set ft=html
   au BufNewFile,BufRead *.jsx set ft=javascript
+  au BufNewFile,BufRead *.rasi set ft=css
 
   autocmd bufread,bufnewfile *.py setl sts=4 sw=4 tw=79 cc=79
   autocmd bufread,bufnewfile *.html setl sts=2 sw=2 tw=79
 ]])
+
+cmd([[command! Curl set splitright | vnew | set filetype=sh | read !sh #]])
